@@ -19,7 +19,7 @@
   },
   "dependencies": {
   	"eventemitter2":"0.4.x",
-  	"request": "2.12.x",
+  	"request": "2.12.x"
   },
   "repository": {
     "type": "git",
