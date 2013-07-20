@@ -11,15 +11,15 @@
 			return exportObj;
 		});
 	} else {
-		var model = require(__dirname+'/lib/model.js').Model;
+		/*var model = require(__dirname+'/lib/model.js').Model;
 		var attribute = require(__dirname+'/lib/attribute.js').Attribute;
-		var entity = require(__dirname+'/lib/entity.js').Entity;
+		var entity = require(__dirname+'/lib/entity.js').Entity;*/
 		var channel = require(__dirname+'/lib/channel.js').Channel;
 		
 		exports = module.exports = {
-			Model: model,
+			/*Model: model,
 			Attribute: attribute,
-			Entity: entity,
+			Entity: entity,*/
 			Channel: channel
 		}
 	}
