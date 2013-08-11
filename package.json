@@ -19,7 +19,9 @@
   },
   "dependencies": {
   	"eventemitter2":"0.4.x",
-  	"request": "2.12.x"
+  	"request": "2.12.x",
+  	"requirejs": "2.1.x",
+  	"amdefine": "0.0.5"
   },
   "repository": {
     "type": "git",
