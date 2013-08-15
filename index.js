@@ -1,26 +1,34 @@
-;!function(exports, undefined) {
+if (typeof define !== 'function') {
+    var define = require('amdefine')(module);
+}
+
+
+var __dirname = __dirname?__dirname:'/';
+
+var requirejs = require('requirejs');
+
+var requireCfg = {
 	
-	if (typeof define === 'function' && define.amd) {	
-		define(['/lib/FluxData/lib/model.js', '/lib/FluxData/lib/attribute.js','/lib/FluxData/lib/entity.js', '/lib/FluxData/lib/channel.js'], function(model, attribute, entity, channel){
-			var exportObj = {
-				Model: model,
-				Attribute: attribute,
-				Entity: entity,
-				Channel: channel
-			}
-			return exportObj;
-		});
-	} else {
-		var model = require(__dirname+'/lib/model.js').Model;
-		var attribute = require(__dirname+'/lib/attribute.js').Attribute;
-		var entity = require(__dirname+'/lib/entity.js').Entity;
-		var channel = require(__dirname+'/lib/channel.js').Channel;
-		
-		exports = module.exports = {
-			Model: model,
-			Attribute: attribute,
-			Entity: entity,
-			Channel: channel
-		}
+}
+
+requirejs.config({
+    //Use node's special variable __dirname to
+    //get the directory containing this file.
+    //Useful if building a library that will
+    //be used in node but does not require the
+    //use of node outside
+    baseUrl: __dirname,
+
+    //Pass the top-level main.js/index.js require
+    //function to requirejs so that node modules
+    //are loaded relative to the top-level JS file.
+    nodeRequire: require?require:undefined
+});
+
+
+
+define(['./lib/channel.js'], function(Channel) {
+	return {
+		Channel: Channel
 	}
-}(typeof process !== 'undefined' && typeof process.title !== 'undefined' && typeof exports !== 'undefined' ? exports : window);
+});
