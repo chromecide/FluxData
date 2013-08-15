@@ -1,7 +1,7 @@
 if (typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
-/*
+
 
 var __dirname = __dirname?__dirname:'/';
 
@@ -25,7 +25,7 @@ requirejs.config({
     nodeRequire: require?require:undefined
 });
 
-*/
+
 
 define(['./lib/channel.js'], function(Channel) {
 	return {
