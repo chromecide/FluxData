@@ -7,7 +7,7 @@ var repl = new FluxData.Channel({
 			type: 'mixins/repl/node'
 		},
 		{
-			type: 'mxins/router/auto'
+			type: 'mixins/router/auto'
 		},
 		{
 			type: 'mixins/tcp/connector',
