@@ -9,7 +9,7 @@ var requirejs = require('requirejs');
 
 var requireCfg = {
 	
-}
+};
 
 requirejs.config({
     //Use node's special variable __dirname to
@@ -22,7 +22,10 @@ requirejs.config({
     //Pass the top-level main.js/index.js require
     //function to requirejs so that node modules
     //are loaded relative to the top-level JS file.
-    nodeRequire: require?require:undefined
+    nodeRequire: require?require:undefined,
+    paths: {
+    	FluxData: './lib/mixins'
+    }
 });
 
 
@@ -30,5 +33,5 @@ requirejs.config({
 define(['./lib/channel.js'], function(Channel) {
 	return {
 		Channel: Channel
-	}
+	};
 });
