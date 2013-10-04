@@ -4,7 +4,7 @@ if (typeof define !== 'function') {
 
 
 var __dirname = __dirname?__dirname:'/';
-
+/*
 var requirejs = require('requirejs');
 
 var requireCfg = {
@@ -26,7 +26,7 @@ requirejs.config({
     paths: {
     	FluxData: './lib/mixins'
     }
-});
+});*/
 
 
 
